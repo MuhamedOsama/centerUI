@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CenterUI
 
 ## Project setup
@@ -27,3 +28,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# centerUI
+>>>>>>> 754aff0b74ce1e0af02b6672f9870abdb6df7ada
