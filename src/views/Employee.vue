@@ -11,8 +11,8 @@
                 <h1>Current Detected ID : {{currentDetection}}</h1>
                 </v-flex>
                 <v-flex mt-4>
-                  <v-btn @click="checkin" large class="success">Check in</v-btn>
-                  <v-btn @click="checkout" large class="blue">Check out</v-btn>
+                  <v-btn :disabled="!detection" @click="checkin" large class="success">Check in</v-btn>
+                  <v-btn :disabled="!detection" @click="checkout" large class="blue">Check out</v-btn>
                 </v-flex>
               </div>
           </v-flex>
@@ -32,11 +32,13 @@ import { QuaggaScanner } from 'vue-quaggajs'
         width: 640,
         height: 480
       },
+      detection:false,
       currentDetection:''
     }),
     methods: {
       detected(result){
         //console.log(result)
+        this.detection = true
         this.currentDetection = result.codeResult.code
         //console.log('detected', result.codeResult.code)
       },
@@ -46,7 +48,7 @@ import { QuaggaScanner } from 'vue-quaggajs'
       },
       checkout(){
         let ID = this.currentDetection
-        
+
       }
     }
   }

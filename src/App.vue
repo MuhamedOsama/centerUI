@@ -7,7 +7,7 @@
       app
     >
       <v-list dense>
-        <v-list-tile @click="" class="pa-3">
+        <v-list-tile to="/" @click="" class="pa-3">
           <v-list-tile-action  >
             <v-icon>dashboard</v-icon>
           </v-list-tile-action>
@@ -15,7 +15,7 @@
             <v-list-tile-title>Employee</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="" class="pa-3">
+        <v-list-tile to="/sharedSpace" @click="" class="pa-3">
           <v-list-tile-action>
             <v-icon>settings</v-icon>
           </v-list-tile-action>
@@ -38,8 +38,9 @@
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
     <v-content>
+      <v-slide-y-transition>
       <router-view></router-view>
-      
+      </v-slide-y-transition>
     </v-content>
     <v-footer app fixed>
       <span>&copy; 2019</span>
