@@ -38,40 +38,22 @@
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
     <v-content>
-      <v-container>
-        <v-layout justify-center align-center>
-          <v-flex xs12>
-            <quagga-scanner  :readerSize="readerSize" :readerType="'code_39_reader'" :onDetected="detected"></quagga-scanner>
-          </v-flex>
-        </v-layout>
-      </v-container>
+      <router-view></router-view>
+      
     </v-content>
     <v-footer app fixed>
-      <span>&copy; 2017</span>
+      <span>&copy; 2019</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
-import { QuaggaScanner } from 'vue-quaggajs'
-
   export default {
-    components: {
-      QuaggaScanner,
-    },
     data: () => ({
       drawer: false,
-      readerSize:{
-        width: 640,
-        height: 480
-      },
-      detecteds: []
     }),
     methods: {
-      detected(result){
-        //console.log(result)
-        console.log('detected', result.codeResult.code)
-      },
+
     },
     props: {
       source: String
