@@ -47,6 +47,9 @@
     </v-footer>
   </v-app>
 </template>
+<script>
+setInterval(function(){ console.log('Hello') }, 300)
+</script>
 
 <script>
   export default {

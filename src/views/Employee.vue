@@ -13,6 +13,7 @@
                 <v-flex mt-4>
                   <v-btn :disabled="!detection" @click="checkin" large class="success">Check in</v-btn>
                   <v-btn :disabled="!detection" @click="checkout" large class="blue">Check out</v-btn>
+                  <v-btn :disabled="!detection" @click="clear" large class="red">Clear</v-btn>
                 </v-flex>
               </div>
           </v-flex>
@@ -48,7 +49,10 @@ import { QuaggaScanner } from 'vue-quaggajs'
       },
       checkout(){
         let ID = this.currentDetection
-
+      },
+      clear(){
+        this.detection = false
+        this.currentDetection = ''
       }
     }
   }
