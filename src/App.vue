@@ -23,7 +23,7 @@
             <v-list-tile-title>Shared Space</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="" class="pa-3">
+        <v-list-tile to="/Members" @click="" class="pa-3">
           <v-list-tile-action>
             <v-icon>phone</v-icon>
           </v-list-tile-action>
@@ -38,7 +38,7 @@
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
     <v-content>
-      <v-slide-y-transition>
+      <v-slide-y-transition mode="out-in">
       <router-view></router-view>
       </v-slide-y-transition>
     </v-content>

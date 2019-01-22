@@ -14,6 +14,11 @@ export default new Router({
       path: '/sharedSpace',
       name: 'sharedSpace',
       component: () => import ('./views/sharedSpace.vue')
+    },
+    {
+      path: '/Members',
+      name: 'Members',
+      component: () => import ('./views/Members.vue')
     }
   ]
 })
